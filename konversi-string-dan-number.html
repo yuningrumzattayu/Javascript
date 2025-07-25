@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Konversi String dan Number</title>
+  </head>
+
+  <body>
+    <script>
+      const value1 = parseInt('1');
+      const value2 = 1;
+
+      const sum = value1 + value2;
+      document.writeln(`<p>${sum}</p>`);
+
+      document.writeln(`<p>${parseInt('1.9')}</p>`);
+      document.writeln(`<p>${parseFloat('1.1')}</p>`);
+      document.writeln(`<p>${Number('1.1')}</p>`);
+
+      const a = 10;
+      const b = 10;
+      const total = a.toString() + b.toString();
+      document.writeln(`<p>${total}</p>`);
+
+      //masih mentolerir kesalahan : membaca dari depan
+      document.writeln(`<p>${parseInt('1.ningrum')}</p>`);
+      document.writeln(`<p>${parseFloat('ningrum')}</p>`);
+
+      //tidak mentolerir kesalahan
+      document.writeln(`<p>${Number('1.ningrum')}</p>`); //NaN
+      document.writeln(`<p>${parseInt('A.1.ningrum')}</p>`); //NaN
+
+      // operasi pada NaN harus 2'2nya bener
+      const first = Number('salah');
+      const second = 2;
+      const mix = first + second;
+
+      // isNaN mengecek apakah nilainya not a number atau bukan
+      document.writeln(`<p>${mix}</p>`);
+      document.writeln(`<p>${isNaN(second)}</p>`); // false
+      document.writeln(`<p>${isNaN(first)}</p>`);
+    </script>
+  </body>
+</html>

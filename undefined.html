@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>undefined</title>
+  </head>
+
+  <body>
+    <script>
+      // undefined = dari awal memang belum didefinisikan dan mengembalikan data undefined
+      let name;
+
+      if (name === undefined) {
+        alert("UNDEFINED");
+      } else {
+        alert("DEFINED");
+      }
+
+      const nama = ["Arum", "Yuningrum"];
+      nama[0] = undefined;
+
+      if (nama[1] === undefined) {
+        console.info("Data Undefined");
+      } else {
+        console.info("Defined");
+      }
+
+      //object property, akan mengembalikan nilai undefined jika object belum didefinisikan
+      const person = {};
+
+      if (person.name === undefined) {
+        console.info("Object Undefined");
+      } else {
+        console.info("Object Defined");
+      }
+
+      // kalau pake array, datanya tidak ada maka dia akan mencetak undefined secara otomatis
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tipe Data Array </title>
+    </head>
+
+    <body>
+        <script>
+            let arrayKosong = [];
+            let arrayName = ["Yuningrum", "Zattayu", "Mustopo"];
+
+            // array dimulai dari index 0
+            // menambah arrray
+            const names =[];
+            names.push("Yuningrum");
+            names.push("Zattayu", "Mustopo");
+
+            console.table(names);
+
+            console.info(names[0]);
+            console.info(names[1]);
+
+            //mengganti array 
+            names[0] = "Software";
+            names[1] = "Engineer";
+            names[2] = "Keren";
+
+            console.table(names);
+
+            delete names[2];
+            console.table(names);
+
+            names.push("arum lagi");
+            console.table(names);
+
+            names[2] = "yuningrum lagi";
+            names.push(1,2,3,4,5,6);
+            console.table(names);
+
+            //memasukkan array ke dalam array 
+            names.push(["yuningrum", "zattayu"]);
+            console.table(names);
+
+            //walaupun dihapus indexnya, jika ditambahkan dia akan terus bertambah, namun jika dihapus array tidak akan di cetak dan bisa diubah
+
+
+
+
+
+
+            
+        </script>
+    </body>
+</html>

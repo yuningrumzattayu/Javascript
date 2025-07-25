@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tipe Data Object </title>
+    </head>
+
+    <body>
+        <script>
+
+            // javascript jika array bukan berupa string, maka ia akan diubah menjadi tipe data object, dan ini akan bahaya akan mengubah behavior 
+
+            const person = {};
+
+            person["nama : "] = "Yuningrum Zattayu";
+            person["alamat :"] = "Indonesia";
+            person["umur"] = 24;
+
+            console.table(person);
+
+            delete person["umur"];
+            console.table(person);
+
+            const orang = {
+                "nama lengkap" : "yuningrum",
+                umur : 24,
+                alamat : "indonesia"
+            };
+
+             console.table(orang);
+
+             //mengakses attribute
+             console.info(`nama : ${orang["nama lengkap"]}`);
+             console.info(`nama : ${orang.alamat}`);
+             console.info(`nama : ${orang.umur}`);
+
+             console.table(orang);
+            
+        </script>
+    </body>
+</html>
