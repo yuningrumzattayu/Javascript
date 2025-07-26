@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>In Operator</title>
+  </head>
+  <body>
+    <script>
+      // untuk mengecek apakah datanya ada di sebuah object atau array
+
+      const name = {
+        firstName: 'Yuningrum',
+        middleName: undefined,
+        lastName: 'Zattayu',
+      };
+
+      if ('firstName' in name) {
+        alert(`hello ${name.firstName}`);
+      } else {
+        alert(`hello`);
+      }
+
+      const student = [null, 'Zattayu', null]; // true
+      const result = [0] in student;
+      document.writeln(`<p>${result} </p>`);
+
+      // dalam sebuah array atau object jika nilainya undefined atau null akan menghasilkan true
+    </script>
+  </body>
+</html>
