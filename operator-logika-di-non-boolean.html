@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator Logika di Non Boolean</title>
+  </head>
+  <body>
+    <script>
+      // dia akan mencetak niali truthy yg pertama, jika falsy dia akan mencetak yg paling terakhir
+
+      console.info('Hello' || ''); // hello
+      console.info('' || []); // []
+      console.info('0' || 'Nol'); // "0"
+      console.info(null || 'null'); //"null"
+      console.info(undefined || 'undefined'); //"undefined"
+      console.info(0 || false); //"false"
+
+      //ingin mengakses sebuah property object
+
+      const person = {
+        firstName: '',
+        lastName: 'Zattayu',
+      };
+
+      //mengecek apakah firstname atau lastname ada pada object property?
+
+      const name = person.firstName || person.lastName;
+      console.info(name);
+
+      //karena firstname itu false, maka akan mencetak lastname (setelahnya)
+
+      console.info('Hello' && ''); // ''
+      console.info('' && []); // ''
+      console.info('0' && 'Nol'); // "nol"
+      console.info(null && 'null'); //null
+      console.info(undefined && 'undefined'); //undefined
+      console.info(0 && false); //0
+
+      //akan mencetak falsy, jika kedua truthy maka diambil truthy yg paling kanan
+    </script>
+  </body>
+</html>
