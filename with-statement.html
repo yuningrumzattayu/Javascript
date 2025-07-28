@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>With Statement</title>
+  </head>
+  <body>
+    <script>
+      //mengakses property dalam sebuah data tanpa harus menyebut datanya
+
+      const person = {
+        firstName: 'Yuningrum',
+        middleName: 'Zattayu',
+        lastName: 'Mustopo',
+      };
+
+      // console.info(person.firstName);
+      // console.info(person.middleName);
+      // console.info(person.lastName);
+
+      with (person) {
+        console.log(firstName);
+        console.log(middleName);
+        console.log(lastName);
+      }
+
+      //tidak direkomendasikan, membuat kode menjadi ambigu
+    </script>
+  </body>
+</html>

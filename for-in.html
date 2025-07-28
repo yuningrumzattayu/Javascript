@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For In</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        firstName: 'Yuningrum',
+        middleName: 'Zattayu',
+        lastName: 'Mustopo',
+      };
+
+      for (const property in person) {
+        document.writeln(`<p>${property}: ${person[property]}</p>`); // akses value dalam property object
+      }
+
+      //bisa digunakan untuk array tapi tidak direkomendasikan
+
+      const names = ['arum', 'zattayu', 'mustopo'];
+
+      for (const index in names) {
+        document.writeln(`<p>${index}: ${names[index]}</p>`); // akses value dalam index array
+      }
+    </script>
+  </body>
+</html>
