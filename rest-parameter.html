@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest Parameter</title>
+  </head>
+  <body>
+    <script>
+      // rest parameter : mengirim data sebanyak-banyaknya pada satu parameter
+      // otomatis di konversi menjadi array
+
+      function sum(name, ...data) {
+        let total = 0;
+        for (const item of data) {
+          total += item;
+        }
+        document.writeln(`<p>Total ${name} is ${total} </p>`);
+      }
+
+      sum('orange', 1, 2, 3, 4, 5, 6);
+      sum('banana', 1, 2, 3, 4, 5, 6);
+      sum('apple', 1, 2, 3, 4, 5, 6);
+
+      // spread syntax : mengubah data array menjadi rest parameter
+
+      const values = [1, 2, 3, 48, 7];
+      sum('Banana', ...values);
+
+      // object arguments sebelum rest parameter, versi lama
+      function oldSum() {
+        let total = 0;
+        for (const argument of arguments) {
+          total += argument;
+        }
+        document.writeln(`<p>Total ${total} </p>`);
+      }
+
+      oldSum(1, 2, 3, 5, 7);
+    </script>
+  </body>
+</html>
