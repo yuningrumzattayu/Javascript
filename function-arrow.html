@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Arrow</title>
+  </head>
+  <body>
+    <script>
+      //function yang lebih sederhana
+      // const sayHello = (name) => {
+      //   const say = `Hello ${name}`;
+      //   console.info(say);
+      // };
+
+      // tanpa block function
+      //const sayHello = (name) => console.info(`hello ${name}`);
+
+      // jika hanya ada satu parameter tidak perlu menggunakan tanda kurung
+      const sayHello = (name) => console.info(`hello ${name}`);
+
+      sayHello('arum');
+
+      // menggunakan return pada kode block
+      // const sum = (first, second) => {
+      //   return first + second;
+      // };
+
+      // satu baris, tidak menggunakan return
+      const sum = (first, second) => first + second;
+
+      console.info(sum(10, 10));
+
+      // anonymous function
+      function giveMeName(callback) {
+        callback('arum');
+      }
+
+      // giveMeName(function (name) {
+      //   console.info(`hello ${name}`);
+      // });
+
+      // arrow function sebagai parameter
+      giveMeName((name) => console.info(`hello ${name}`));
+    </script>
+  </body>
+</html>
